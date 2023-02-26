@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:gravity="center_horizontal"
     android:paddingTop="270dp"
     android:background="@drawable/background"
     >
@@ -16,6 +15,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginBottom="10dp"
+            android:layout_marginStart="50dp"
             >
 
             <TextView
@@ -33,8 +33,15 @@
                 android:id="@+id/fromSpinner"
                 android:background="#E3A4A4"
                 android:contentDescription="@string/fromSpinnerContentDesc"
+                android:visibility="gone"
                 />
 
+            <AutoCompleteTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fromTextView"
+                android:textSize="20sp"
+                android:hint="@string/fromSpinnerContentDesc"/>
         </LinearLayout>
 
         <LinearLayout
@@ -42,6 +49,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginBottom="10dp"
+            android:layout_marginStart="50dp"
             >
 
             <TextView
@@ -52,6 +60,14 @@
                 android:text="@string/to"
                 />
 
+            <AutoCompleteTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/toTextView"
+                android:layout_marginStart="60dp"
+                android:textSize="20sp"
+                android:hint="@string/toSpinnerContentDesc"/>
+
             <Spinner
                 android:layout_width="150dp"
                 android:layout_height="50dp"
@@ -59,6 +75,7 @@
                 android:background="#E3A4A4"
                 android:layout_marginStart="60dp"
                 android:contentDescription="@string/toSpinnerContentDesc"
+                android:visibility="gone"
                 />
 
         </LinearLayout>
@@ -69,7 +86,9 @@
             android:id="@+id/submitBtn"
             android:text="@string/submit"
             android:textSize="25sp"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="140dp"
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -79,6 +98,7 @@
             android:layout_marginTop="20dp"
             android:id="@+id/resultTextView"
             android:text="@string/resultSampleText"
+            android:layout_marginStart="90dp"
             />
 
 

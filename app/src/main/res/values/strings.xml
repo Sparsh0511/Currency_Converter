@@ -3,7 +3,9 @@
     <string name="from">From</string>
     <string name="to">To</string>
     <string name="submit">Submit</string>
-    <string name="resultSampleText">1 USD = 82.93 INR</string>
-    <string name="fromSpinnerContentDesc">Select the currency from which you want to convert.</string>
-    <string name="toSpinnerContentDesc">Select the currency to which you want to convert.</string>
+    <string name="resultSampleText"> </string>
+    <string name="fromSpinnerContentDesc">Source Country</string>
+    <string name="toSpinnerContentDesc">Destination Country</string>
+    <string name="fromAutoCompleteTextView">Source Country</string>
+    <string name="toAutoCompleteTextView">Destination Country</string>
 </resources>
