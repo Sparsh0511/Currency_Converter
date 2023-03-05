@@ -1,7 +1,6 @@
 package com.example.currencyconverter;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,16 +9,12 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
-
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.Currency;
 import java.util.Locale;
@@ -51,9 +46,9 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> countryNameAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item , countryName);
 
         fromTextView.setAdapter(countryNameAdapter);
-        fromTextView.setThreshold(3);
+        fromTextView.setThreshold(1);
         toTextView.setAdapter(countryNameAdapter);
-        toTextView.setThreshold(3);
+        toTextView.setThreshold(1);
 
         AndroidNetworking.initialize(this);
 
@@ -78,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
             String from = currencyIds.get(fromIdx);
             String to = currencyIds.get(toIdx);
 
-            String URL = new String("https://api.exchangerate.host/convert?from=" + from + "&to=" + to);
+            String URL = "https://api.exchangerate.host/convert?from=" + from + "&to=" + to;
             AndroidNetworking.get(URL)
                     .setPriority(Priority.HIGH)
                     .build()
@@ -290,7 +285,7 @@ public class MainActivity extends AppCompatActivity {
                     String currencyCode = currency.getCurrencyCode();
                     if(!currencyIds.contains(currencyCode) && !countryName.contains(country)) {
                         currencyIds.add(currencyCode);
-                        countryName.add(country);
+                        countryName.add(country + " (" + currencyCode + ")");
                         Log.d("CTY", country + "  ->  " + currencyCode);
                     }
                 } catch (IllegalArgumentException e) {

@@ -4,8 +4,8 @@
     <string name="to">To</string>
     <string name="submit">Submit</string>
     <string name="resultSampleText"> </string>
-    <string name="fromSpinnerContentDesc">Source Country</string>
-    <string name="toSpinnerContentDesc">Destination Country</string>
+    <string name="fromSpinnerContentDesc">Source</string>
+    <string name="toSpinnerContentDesc">Destination</string>
     <string name="fromAutoCompleteTextView">Source Country</string>
     <string name="toAutoCompleteTextView">Destination Country</string>
 </resources>
